@@ -1,0 +1,13 @@
+volumes:
+  data:
+
+services:
+  postgres-example:
+    image: postgres:latest
+    container_name: postgres-example
+    environment:
+      - POSTGRES_PASSWORD=postgrespw
+    ports:
+      - 5432:5432
+    volumes:
+      - data:/var/lib/postgresql
